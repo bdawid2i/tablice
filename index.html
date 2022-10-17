@@ -14,19 +14,47 @@
             wielkosc_tablicy = prompt('Podaj ilość elementów, jakie chcesz wprowadzić');
         } while(isNaN(wielkosc_tablicy));
         
-        let Tab = [];
+        let tab = [];
 
         for(let i=0;i<wielkosc_tablicy;i++)
         {
-            Tab[i]=prompt('Podaj element');
+            tab[i]=prompt('Podaj element');
         }
-
-        document.write('Elementy tablicy: ');
-        for(let i=0;i<wielkosc_tablicy;i++)
+        
+        let wybor;
+        wybor = prompt('Od tyłu, czy od przodu?');
+        if(wybor == 'od tyłu')
         {
-            document.write( + Tab[i] + ' ');
+            wypisywanie_od_tylu(tab);
+        }
+        else if(wybor == 'od przodu')
+        {
+            wypisywanie_od_przodu(tab);
+        }
+        else
+        {
+            alert('Podałeś złą odpowiedź');
         }
 
+
+
+        function wypisywanie_od_przodu(tablica)
+        {
+            document.write('Elementy tablicy od przodu: ');
+            for(let i=0;i<wielkosc_tablicy;i++)
+            {
+                document.write( + tablica[i] + ' ');
+            }
+        }
+
+        function wypisywanie_od_tylu(tablica)
+        {
+            document.write('Elementy tablicy od tylu: ');
+            for(let i=wielkosc_tablicy-1;i>-1;i--)
+            {
+                document.write( + tablica[i] + ' ');
+            }
+        }
 
     </script>
 
