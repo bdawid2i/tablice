@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Zadanie tablice</title>
+</head>
+<body>
+    
+    <script>
+        let wielkosc_tablicy;
+    
+        do{
+            wielkosc_tablicy = prompt('Podaj ilość elementów, jakie chcesz wprowadzić');
+        } while(isNaN(wielkosc_tablicy));
+        
+        let Tab = [];
+
+        for(let i=0;i<wielkosc_tablicy;i++)
+        {
+            Tab[i]=prompt('Podaj element');
+        }
+
+        document.write('Elementy tablicy: ');
+        for(let i=0;i<wielkosc_tablicy;i++)
+        {
+            document.write( + Tab[i] + ' ');
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
